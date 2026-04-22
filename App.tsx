@@ -207,10 +207,10 @@ export default function App() {
             <div className="grid grid-cols-2 grid-rows-5 gap-4 h-full">
               {page.map((slip, index) => (
                 <div key={index} className="border-2 border-stone-800 px-3 py-2 rounded-xl flex flex-col h-full bg-white relative overflow-hidden">
-                  <div className="flex-1 min-h-0 w-full flex items-center justify-center">
-                    <img src={SLIP_LOGO_URL} alt="Logo" className="max-w-full max-h-full object-contain" />
+                  <div className="flex-1 min-h-0 w-full flex items-end justify-center pb-1">
+                    <img src={SLIP_LOGO_URL} alt="Logo" className="max-w-full max-h-full object-contain object-bottom" />
                   </div>
-                  <div className="text-center shrink-0 mt-1">
+                  <div className="text-center shrink-0 mt-0">
                     <p className="text-xl font-bold text-stone-900 leading-tight">{slip.type}</p>
                     <p className="text-base font-semibold text-stone-800 leading-tight">{formatPrice(slip.price)}</p>
                   </div>
