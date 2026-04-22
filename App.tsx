@@ -209,7 +209,7 @@ export default function App() {
                 <div key={index} className="border-2 border-stone-800 px-3 py-2 rounded-xl flex flex-col h-full bg-white relative overflow-hidden">
                   <div className="flex-1 flex flex-col items-center justify-center min-h-0 w-full">
                     <img src={SLIP_LOGO_URL} alt="Logo" className="max-w-full max-h-[65%] object-contain" />
-                    <div className="text-center shrink-0 mt-1.5">
+                    <div className="text-center shrink-0 -mt-3">
                       <p className="text-[1.35rem] font-bold text-stone-900 leading-tight">{slip.type}</p>
                       <p className="text-base font-semibold text-stone-800 leading-tight">{formatPrice(slip.price)}</p>
                     </div>
