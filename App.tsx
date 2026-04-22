@@ -183,7 +183,7 @@ export default function App() {
               </div>
               <div className="space-y-4">
                 {slips.filter(s => s.type === type).map(slip => (
-                  <div key={slip.id} className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center p-4 bg-white/5 rounded-xl">
+                  <div key={slip.id} className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center p-4 bg-black/20 rounded-xl">
                     <input type="date" value={slip.date} onChange={(e) => updateSlip(slip.id, 'date', e.target.value)} className="input-field w-full" />
                     <input type="text" placeholder="Fiyat" value={slip.price} onChange={(e) => updateSlip(slip.id, 'price', e.target.value)} className="input-field w-full" />
                     <div className="flex gap-2 items-center justify-between sm:justify-start">
