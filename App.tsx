@@ -206,13 +206,13 @@ export default function App() {
           <div key={pageIndex} className="h-screen p-8 box-border" style={{ pageBreakAfter: 'always' }}>
             <div className="grid grid-cols-2 grid-rows-5 gap-4 h-full">
               {page.map((slip, index) => (
-                <div key={index} className="border-2 border-stone-800 p-4 rounded-xl flex flex-col justify-between items-center h-full bg-white relative">
-                  <img src={SLIP_LOGO_URL} alt="Logo" className="h-32 object-contain mt-2" />
-                  <div className="text-center flex-1 flex flex-col justify-center">
-                    <p className="text-xl font-bold text-stone-900">{slip.type}</p>
+                <div key={index} className="border-2 border-stone-800 px-4 py-3 rounded-xl flex flex-col justify-between items-center h-full bg-white relative">
+                  <img src={SLIP_LOGO_URL} alt="Logo" className="h-[7.5rem] object-contain mb-0" />
+                  <div className="text-center flex-1 flex flex-col justify-start mt-2">
+                    <p className="text-[1.35rem] font-bold text-stone-900 leading-tight">{slip.type}</p>
                     <p className="text-base font-semibold text-stone-800">{formatPrice(slip.price)}</p>
                   </div>
-                  <div className="w-full text-right mt-2">
+                  <div className="w-full text-right mt-1">
                     <p className="text-xs font-medium text-stone-600">{formatDate(slip.date)}</p>
                   </div>
                 </div>
