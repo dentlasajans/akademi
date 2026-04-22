@@ -26,4 +26,8 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: white;
+  color-scheme: dark;
+}
+.input-field::-webkit-calendar-picker-indicator {
+  cursor: pointer;
 }

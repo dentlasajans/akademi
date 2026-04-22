@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Plus, Trash2, Printer, CheckCircle2, LogOut } from 'lucide-react';
 
-const LOGO_URL = 'https://res.cloudinary.com/dejx0brol/image/upload/v1776755327/Ads%C4%B1z_tasar%C4%B1m_awydxr.png';
-const SLIP_LOGO_URL = 'https://res.cloudinary.com/dejx0brol/image/upload/v1776753226/Ads%C4%B1z_tasar%C4%B1m_rgmaqg.png';
+const LOGO_URL = 'https://res.cloudinary.com/dejx0brol/image/upload/v1776845028/M%C4%B0LL%C4%B0_E%C4%9E%C4%B0T%C4%B0M_AKADEM%C4%B0S%C4%B0_E%C4%9E%C4%B0T%C4%B0M_VE_UYGULAMA_MERKEZ%C4%B0_AKSARAY_qh7uf3.png';
+const SLIP_LOGO_URL = 'https://res.cloudinary.com/dejx0brol/image/upload/v1776845605/M%C4%B0LL%C4%B0_E%C4%9E%C4%B0T%C4%B0M_AKADEM%C4%B0S%C4%B0_E%C4%9E%C4%B0T%C4%B0M_VE_UYGULAMA_MERKEZ%C4%B0_AKSARAY_1_kkv7bq.png';
 
 const formatDate = (dateStr: string) => {
   if (!dateStr) return '';
@@ -106,7 +106,7 @@ export default function App() {
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen mesh-gradient font-sans flex items-center justify-center p-4">
-        <form onSubmit={handleLogin} className="glass p-10 rounded-3xl flex flex-col gap-5 w-full max-w-sm shadow-xl items-center border border-white/10 relative overflow-hidden">
+        <form onSubmit={handleLogin} className="glass py-8 px-10 pt-4 rounded-3xl flex flex-col gap-5 w-full max-w-sm shadow-xl items-center border border-white/10 relative overflow-hidden">
           {loginSuccess ? (
             <div className="flex flex-col items-center justify-center py-8 gap-4 animate-out fade-out duration-1000 delay-500">
               <CheckCircle2 className="text-emerald-400 w-20 h-20" strokeWidth={1.5} />
@@ -115,8 +115,10 @@ export default function App() {
             </div>
           ) : (
             <>
-              <img src={LOGO_URL} alt="Logo" className="w-40 h-40 object-contain mb-4" />
-              <h1 className="text-2xl font-medium text-white mb-2">Sisteme Giriş</h1>
+              <div className="flex flex-col items-center gap-2 w-full mb-2">
+                <img src={LOGO_URL} alt="Logo" className="w-[20rem] h-auto object-contain -mb-2" />
+                <h1 className="text-xl font-medium text-white/80">Sisteme Giriş</h1>
+              </div>
               <input
                 type="text"
                 placeholder="Kullanıcı Adı"
@@ -163,9 +165,9 @@ export default function App() {
         <span className="font-medium text-sm hidden sm:inline">Çıkış Yap</span>
       </button>
 
-      <div className="max-w-4xl mx-auto pt-12 sm:pt-0">
-        <header className="mb-8 flex flex-col items-center gap-4 glass p-6 rounded-2xl shadow-sm">
-          <img src={LOGO_URL} alt="Logo" className="w-48 h-48 object-contain" />
+      <div className="max-w-4xl mx-auto pt-14 sm:pt-0">
+        <header className="mb-4 flex flex-col items-center glass pt-3 pb-1.5 rounded-2xl shadow-sm">
+          <img src={LOGO_URL} alt="Logo" className="w-56 sm:w-64 h-auto object-contain" />
         </header>
 
         <main className="space-y-6">
@@ -205,7 +207,7 @@ export default function App() {
             <div className="grid grid-cols-2 grid-rows-5 gap-4 h-full">
               {page.map((slip, index) => (
                 <div key={index} className="border-2 border-stone-800 p-4 rounded-xl flex flex-col justify-between items-center h-full bg-white relative">
-                  <img src={SLIP_LOGO_URL} alt="Logo" className="h-20 object-contain mt-2" />
+                  <img src={SLIP_LOGO_URL} alt="Logo" className="h-32 object-contain mt-2" />
                   <div className="text-center flex-1 flex flex-col justify-center">
                     <p className="text-xl font-bold text-stone-900">{slip.type}</p>
                     <p className="text-base font-semibold text-stone-800">{formatPrice(slip.price)}</p>
